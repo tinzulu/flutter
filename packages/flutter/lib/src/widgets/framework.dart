@@ -2730,7 +2730,8 @@ class BuildOwner {
   }
 
   void _unregisterGlobalKey(GlobalKey key, Element element) {
-    assert(() {
+    assert(
+      () {
       if (_globalKeyRegistry.containsKey(key) && _globalKeyRegistry[key] != element) {
         assert(element.widget != null);
         final Element oldElement = _globalKeyRegistry[key]!;
